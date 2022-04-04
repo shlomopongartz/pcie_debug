@@ -4,8 +4,10 @@
 #LDFLAGS += -lreadline -lcurses
 INSTALL_DIR = /usr/bin/
 
-default: pci_debug
+default: pci_debug.c
 	gcc -Wall pci_debug.c -L/usr/lib/x86_64-linux-gnu/ -L/lib/x86_64-linux-gnu/ -lreadline -lcurses -o pci_debug
 
-pci_debug: pci_debug.c
+
+clean:
+	rm pci_debug
 
